@@ -1,0 +1,27 @@
+{
+  "name": "water-shader",
+  "version": "0.0.1",
+  "description": "Trying to replicate thelucre's 'digital water' w/ Jonobr1's https://www.shadertoy.com/view/ltj3W3",
+  "main": "dist/js/app.js",
+  "scripts": {
+    "build": "browserify src/js/app.js -o dist/js/app.js",
+    "build:watch": "watchify src/js/app.js -o dist/js/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lejeunerenard",
+  "license": "GPLv2",
+  "devDependencies": {
+    "browserify": "^10.1.3",
+    "gulp": "^3.8.11",
+    "gulp-nodemon": "^2.0.3",
+    "gulp-util": "^3.0.4",
+    "three-orbit-controls": "^69.0.4",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.1"
+  },
+  "dependencies": {
+    "connect": "^3.3.5",
+    "serve-static": "^1.9.2",
+    "three": "^0.71.0"
+  }
+}
