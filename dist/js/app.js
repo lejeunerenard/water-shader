@@ -35845,9 +35845,11 @@ function Visualizer( options ) {
 Visualizer.prototype.createScene = function createScene() {
 
    // Render pass camera and scene
-   this.renderer = new THREE.WebGLRenderer();
+   this.renderer = new THREE.WebGLRenderer({
+      antialias: true
+   });
    this.renderer.setSize( window.innerWidth, window.innerHeight );
-   this.renderer.setClearColor( 0x111111 );
+   this.renderer.setClearColor( 0xBAACA8 );
    document.querySelector('body').appendChild( this.renderer.domElement );
 
    this.scene = new THREE.Scene();
@@ -35880,7 +35882,7 @@ Visualizer.prototype.createScene = function createScene() {
    this.scene.add( this.sphere );
 };
 Visualizer.prototype.update = function update() {
-   this.sphere.material.uniforms.time.value += 0.05;
+   this.sphere.material.uniforms.time.value += 0.1;
    this.renderer.render( this.scene, this.camera );
 };
 module.exports = Visualizer;
