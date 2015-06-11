@@ -42,7 +42,7 @@ Visualizer.prototype.createScene = function createScene() {
    var geo = new THREE.SphereGeometry( 10, 32, 32 );
    var material = new THREE.ShaderMaterial({
       uniforms: {
-         time: { type: "f", value: 1.0 }
+         time: { type: "f", value: Math.random() * 100.0 }
       },
       vertexShader: document.querySelector('#vertexShader').textContent,
       fragmentShader: document.querySelector('#fragShader').textContent
