@@ -11,5 +11,5 @@ npm i
 ## Run
 
 ```bash
-gulp dev
+npm start
 ```
